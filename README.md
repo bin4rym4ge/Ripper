@@ -7,3 +7,5 @@ usage:
 Final slash is important (no err handaling right now)
 
 You don't need the final 2 options.
+
+Runs in bash, needs curl.
