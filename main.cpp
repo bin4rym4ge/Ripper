@@ -27,7 +27,7 @@ int main(int argc, char* argv[]){
 	temp = "";
 
 	// regex declarations
-	regex r(regstr + "(.*)"); // make global... sudo global
+	regex r(regstr + "(.*)"); // make global... pseudo global
 	smatch sm;
 
 	// vectors
@@ -113,7 +113,7 @@ int main(int argc, char* argv[]){
 	return 0;
 }
 
-
+// format number to string using leading zeros
 string fnumstr4(int num){
 
 	if(num < 10){
