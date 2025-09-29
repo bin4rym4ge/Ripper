@@ -7,7 +7,8 @@ usage (will change once parser is finnished):
 You need the final 2 options right now (will change once parser is finnished).
 
 Runs in bash, needs curl.
- TODO:
+
+TODO:
  - parser
  - multidownload mode
  - sigint/sigkill handler
