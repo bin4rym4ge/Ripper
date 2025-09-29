@@ -8,8 +8,10 @@ You need the final 2 options right now (will change once parser is finnished).
 
 Runs in bash, needs curl.
 
+requires [libargmage](https://github.com/bin4rym4ge/libargmage)
+
 TODO:
- - argv parser
+ - argv parser (in progress)
  - multidownload mode
  - sigint/sigkill handler
  - help page
