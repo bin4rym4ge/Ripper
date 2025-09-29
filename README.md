@@ -9,7 +9,7 @@ You need the final 2 options right now (will change once parser is finnished).
 Runs in bash, needs curl.
 
 TODO:
- - parser
+ - argv parser
  - multidownload mode
  - sigint/sigkill handler
  - help page
