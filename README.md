@@ -13,11 +13,13 @@ just drop the libargmage folder into the project folder and make.
 -x (no url save file or output)<br />
 -o /download/path/<br />
 
+**Done:**
+ - argv parser
+
 **TODO:**
- - argv parser (in progress)
+ - help page
  - multidownload mode
  - sigint/sigkill handler
- - help page
  - convert files to cbz/pdf/other
  - error handling
 
