@@ -11,7 +11,7 @@ Runs in bash, needs curl.
 requires [libargmage](https://github.com/bin4rym4ge/libargmage).
 just drop the libargmage folder into the project folder and make.
 
-Usage:<br />
+**Usage:**<br />
 -f file.html (or url savefile. depends on your regex)<br />
 -r regex_file.txt<br />
 -s url_save_file.txt<br />
