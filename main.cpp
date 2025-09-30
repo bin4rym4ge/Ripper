@@ -11,6 +11,7 @@
 using namespace std;
 
 string fnumstr4(int num);
+void helpscrn();
 
 int main(int argc, char* argv[]){
 
@@ -22,6 +23,7 @@ int main(int argc, char* argv[]){
 
 		cout << "No files given\n";
 		// display help screen
+		helpscrn();
 		return 0;
 
 	}
@@ -29,12 +31,14 @@ int main(int argc, char* argv[]){
 
 		cout << "No html file given\n";
 		// display help screen
+		helpscrn();
 		return 0;
 
 	} else if( (args["-r"] == "") || (args["-r"] == "\0") ){
 
 		cout << "No regex file given\n";
 		// display help screen
+		helpscrn();
 		return 0;
 	}
 
@@ -130,3 +134,30 @@ int main(int argc, char* argv[]){
 
 	return 0;
 }
+
+void helpscrn(){
+
+	cout << "\t+=======================================================+" << endl;
+	cout << "\t|\t\t\t\t\t\t\t|\n";
+	cout << "\t|\t--help (-h)\t\t\t\t\t|\n";
+
+	cout << "\t|\t\t\t\t\t\t\t|\n";
+	cout << "\t|\t    -f file.html (or url savefile. depends on your regex)\t\t|\n";
+
+	cout << "\t|\t\t\t\t\t\t\t|\n";
+	cout << "\t|\t    -r regex_file.txt\t\t|\n";
+
+	cout << "\t|\t\t\t\t\t\t\t|\n";
+	cout << "\t|\t    -s url_save_file.txt\t\t|\n";
+
+	cout << "\t|\t\t\t\t\t\t\t|\n";
+	cout << "\t|\t    -x (no url save file or output)\t\t|\n";
+
+	cout << "\t|\t\t\t\t\t\t\t|\n";
+	cout << "\t|\t    -o /download/path/\t\t|\n";
+
+	cout << "\t|\t\t\t\t\t\t\t|\n";
+	cout << "\t+=======================================================+" << endl;
+
+}
+
