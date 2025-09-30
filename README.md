@@ -12,7 +12,7 @@ requires [libargmage](https://github.com/bin4rym4ge/libargmage).
 just drop the libargmage folder into the project folder and make.
 
 Usage:
--f file.html (or url savefile. depends on your regex) \n
+-f file.html (or url savefile. depends on your regex)<br />
 -r regex_file.txt
 -s url_save_file.txt
 -x (no url save file or output)
