@@ -6,16 +6,16 @@ Runs in bash, needs curl.
 Requires [libargmage](https://github.com/bin4rym4ge/libargmage).
 Just drop the libargmage folder into the project folder and make.<br />
 or<br />
-git clone https://github.com/bin4rym4ge/libargmage.git<br />
+`git clone https://github.com/bin4rym4ge/libargmage.git`<br />
 into the project file.
 
 
 **Usage:**<br />
--f file.html (or url savefile. depends on your regex)<br />
--r regex_file.txt<br />
--s url_save_file.txt<br />
--x (no url save file or output)<br />
--o /download/path/<br />
+`-f file.html` (or url savefile. depends on your regex)<br />
+`-r regex_file.txt`<br />
+`-s url_save_file.txt`<br />
+`-x` (no url save file or output)<br />
+`-o /download/path/`<br />
 
 **Done:**
  - argv parser
