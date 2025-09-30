@@ -4,7 +4,10 @@ A small c++ program that takes an html file, uses regex to extract file urls (us
 Runs in bash, needs curl.
 
 Requires [libargmage](https://github.com/bin4rym4ge/libargmage).
-Just drop the libargmage folder into the project folder and make.
+Just drop the libargmage folder into the project folder and make.<br />
+or<br />
+git clone https://github.com/bin4rym4ge/libargmage.git
+
 
 **Usage:**<br />
 -f file.html (or url savefile. depends on your regex)<br />
