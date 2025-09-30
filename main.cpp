@@ -4,7 +4,9 @@
 #include <string>
 #include <thread>
 #include <regex>
+#include <map>
 #include "ripper.h"
+#include "./libargmage/argmage.h"
 
 using namespace std;
 
@@ -12,9 +14,35 @@ string fnumstr4(int num);
 
 int main(int argc, char* argv[]){
 
+	// parse argv into a map
+	auto args = argmage::argvtomap(argc, argv, 1);
+
+	// check if files args given and give necessary feedback
+	if( (args["-f"] == "") && (args["-r"] == "") ){
+
+		cout << "No files given\n";
+		// display help screen
+		return 0;
+
+	}
+	if( (args["-f"] == "") || (args["-f"] == "\0") ){
+
+		cout << "No html file given\n";
+		// display help screen
+		return 0;
+
+	} else if( (args["-r"] == "") || (args["-r"] == "\0") ){
+
+		cout << "No regex file given\n";
+		// display help screen
+		return 0;
+	}
+
+	// add directory validation for all files... later.
+
 	// file stream declarations
-	ifstream infile((string)argv[1]);
-	ifstream regfile((string)argv[2]);
+	ifstream infile(args["-f"]);
+	ifstream regfile(args["-r"]);
 
 	// string declarations
 	string temp;
@@ -40,6 +68,7 @@ int main(int argc, char* argv[]){
 
 	// infile to vector
 	while(getline(infile, temp)) vin.push_back(temp);
+	infile.close();
 
 	// invec regex matches to string
 	for(string in : vin){
@@ -49,10 +78,6 @@ int main(int argc, char* argv[]){
 		instr = instr + sm[1].str();
 	}
 
-	// test instr matches
-	// cout << instr << endl;
-
-
 	// urls to vec
 	do{
 		regex_search(instr, sm, r);
@@ -61,34 +86,36 @@ int main(int argc, char* argv[]){
 
 		instr = sm[2].str();
 
-	}while( (instr != "") || (instr != "\0") );
+	}while( (instr != "") && (instr != "\0") ); //changed from || to &&
 
-	infile.close();
-
-	// cout << vurl[0] << endl;
+	// infile.close();
 
 
+	// if -x don't display urls in stdout or save to file
+	// check if url save file given
+	// if not display to std out
+	if( (args["-x"] != "") && (args["-x"] != "\0") ){
 
+	} else if( (args["-s"] == "") || (args["-s"] == "\0") ){
 
-	if(!argv[3]){
 		for(string url : vurl){
 			cout << url << endl;
 		}
-	}
 
-	//system("echo hello");
+	} else {
 
-	if(argv[3]){
-		
-		ofstream outfile((string)argv[3]);
+		ofstream outfile(args["-s"]);
 
 		for(string url : vurl){
 			outfile << url << endl;
 		}
+		
+		outfile.close();
 	}
 
 	// set file names
 	regex fnr("\\/([^/]+\\.\\w+$)");
+
 	for(int i = 0; i < vurl.size(); i++){
 
 		regex_search(vurl.at(i), sm, fnr);
@@ -97,9 +124,9 @@ int main(int argc, char* argv[]){
 	}
 
 	// sequential download
-	if(argv[4]) seqdl(vurl, vfname, (string)argv[4]);
+	if( (args["-o"] != "") && (args["-o"] != "\0") ) seqdl(vurl, vfname, args["-o"]);
 
+	// add parallel downloading
 
 	return 0;
 }
-
