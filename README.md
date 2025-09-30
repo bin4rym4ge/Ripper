@@ -3,8 +3,8 @@ A small c++ program that takes an html file, uses regex to extract file urls (us
 
 Runs in bash, needs curl.
 
-requires [libargmage](https://github.com/bin4rym4ge/libargmage).
-just drop the libargmage folder into the project folder and make.
+Requires [libargmage](https://github.com/bin4rym4ge/libargmage).
+Just drop the libargmage folder into the project folder and make.
 
 **Usage:**<br />
 -f file.html (or url savefile. depends on your regex)<br />
@@ -15,13 +15,15 @@ just drop the libargmage folder into the project folder and make.
 
 **Done:**
  - argv parser
+ - help page
+
 
 **TODO:**
- - help page
  - multidownload mode
  - sigint/sigkill handler
  - convert files to cbz/pdf/other
  - error handling
+
 
 **Maybe:**
  - logging
