@@ -1,5 +1,5 @@
 default:
-	g++ main.cpp -o rip
+	g++ main.cpp ripper.cpp ./libargmage/argmage.cpp -o rip
 edit:
-	vim -p main.cpp
+	vim -p main.cpp ripper.cpp ripper.h
 
