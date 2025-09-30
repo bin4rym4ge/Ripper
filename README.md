@@ -8,7 +8,7 @@ You need the final 2 options right now (will change once parser is finnished).
 
 Runs in bash, needs curl.
 
-requires [libargmage](https://github.com/bin4rym4ge/libargmage)
+requires [libargmage](https://github.com/bin4rym4ge/libargmage).
 just drop the libargmage folder into the project folder and make.
 
 TODO:
