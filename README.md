@@ -6,7 +6,8 @@ Runs in bash, needs curl.
 Requires [libargmage](https://github.com/bin4rym4ge/libargmage).
 Just drop the libargmage folder into the project folder and make.<br />
 or<br />
-git clone https://github.com/bin4rym4ge/libargmage.git
+git clone https://github.com/bin4rym4ge/libargmage.git<br />
+into the project file.
 
 
 **Usage:**<br />
