@@ -1,5 +1,6 @@
 # Ripper
-A small c++ program that takes an html file, uses regex to extract file urls (usually image files), and downloads all urls while listing them in a file (or stdout if no file or dl path given. will change.).
+A small c++ program that takes an html file, uses regex to extract file urls (usually image files), and downloads all urls.
+Options include listing extracted urls in a file or stdout
 
 Runs in bash, needs curl.
 
@@ -8,8 +9,8 @@ Just drop the libargmage folder into the project folder and make.<br />
 or<br />
 `git clone https://github.com/bin4rym4ge/libargmage.git`<br />
 into the project file.
-
-
+<br />
+<br />
 **Usage:**<br />
 `-f file.html` (or url savefile. depends on your regex)<br />
 `-r regex_file.txt`<br />
@@ -17,9 +18,7 @@ into the project file.
 `-x` (no url save file or output)<br />
 `-o /download/path/`<br />
 <br /><br />
-Feel free ot use whatever and learn from it.
-<br /><br />
-
+Feel free ot use whatever and learn from it.<br /><br />
 **Done:**
  - argv parser
  - help page
