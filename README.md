@@ -17,21 +17,15 @@ into the project file.
 `-x` (no url save file or output)<br />
 `-o /download/path/`<br />
 <br /><br />
-Feel free ot use whatever and learn from it.
-<br />
-<br />
+Feel free ot use whatever and learn from it.<br /><br />
 **Done:**
  - argv parser
- - help page
-<br />
-<br />
+ - help page<br /><br />
 **TODO:**
  - multidownload mode
  - sigint/sigkill handler
  - convert files to cbz/pdf/other
- - error handling
-<br />
-<br />
+ - error handling<br /><br />
 **Maybe:**
  - logging
  - download html file (thats up to you at the moment)
