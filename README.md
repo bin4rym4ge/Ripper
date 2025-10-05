@@ -1,5 +1,6 @@
 # Ripper
-A small c++ program that takes an html file, uses regex to extract file urls (usually image files), and downloads all urls while listing them in a file (or stdout if no file or dl path given. will change.).
+A small c++ program that takes an html file, uses regex to extract file urls (usually image files), and downloads all urls.
+Options include listing extracted urls in a file or stdout
 
 Runs in bash, needs curl.
 
