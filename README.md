@@ -20,7 +20,7 @@ into the project file.
 Feel free ot use whatever and learn from it.<br /><br />
 **Done:**
  - argv parser
- - help page<br /><br />
+ - help page<br />
 **TODO:**
  - multidownload mode
  - sigint/sigkill handler
