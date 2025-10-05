@@ -8,8 +8,8 @@ Just drop the libargmage folder into the project folder and make.<br />
 or<br />
 `git clone https://github.com/bin4rym4ge/libargmage.git`<br />
 into the project file.
-
-
+<br />
+<br />
 **Usage:**<br />
 `-f file.html` (or url savefile. depends on your regex)<br />
 `-r regex_file.txt`<br />
@@ -18,20 +18,20 @@ into the project file.
 `-o /download/path/`<br />
 <br /><br />
 Feel free ot use whatever and learn from it.
-<br /><br />
-
+<br />
+<br />
 **Done:**
  - argv parser
  - help page
-
-
+<br />
+<br />
 **TODO:**
  - multidownload mode
  - sigint/sigkill handler
  - convert files to cbz/pdf/other
  - error handling
-
-
+<br />
+<br />
 **Maybe:**
  - logging
  - download html file (thats up to you at the moment)
