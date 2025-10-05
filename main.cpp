@@ -15,6 +15,14 @@ void helpscrn();
 
 int main(int argc, char* argv[]){
 
+	// help
+	if( ((string)argv[1] == "-h") || ((string)argv[1] == "--help") ){
+
+		helpscrn();
+
+		return 0;
+	}
+
 	// parse argv into a map
 	auto args = argmage::argvtomap(argc, argv, 1);
 
@@ -128,36 +136,41 @@ int main(int argc, char* argv[]){
 	}
 
 	// sequential download
-	if( (args["-o"] != "") && (args["-o"] != "\0") ) seqdl(vurl, vfname, args["-o"]);
+	if( ((args["-o"] != "") && (args["-o"] != "\0")) && ((args["-m"] == "") || (args["-m"] == "\0")) ) seqdl(vurl, vfname, args["-o"]);
 
-	// add parallel downloading
+	// parallel downloading
+	if( ((args["-o"] != "") && (args["-o"] != "\0")) && ((args["-m"] != "") && (args["-m"] != "\0")) ){
+
+	}else if( (args["-m"] != "") && (args["-m"] != "\0") ){
+
+	}
 
 	return 0;
 }
 
 void helpscrn(){
 
-	cout << "\t+=======================================================+" << endl;
-	cout << "\t|\t\t\t\t\t\t\t|\n";
-	cout << "\t|\t--help (-h)\t\t\t\t\t|\n";
+	cout << "\n\t+===================================================================+\n";
+	cout << "\n";
+	cout << "\t\t--help (-h)\n";
 
-	cout << "\t|\t\t\t\t\t\t\t|\n";
-	cout << "\t|\t    -f file.html (or url savefile. depends on your regex)\t\t|\n";
+	cout << "\n";
+	cout << "\t\t    -f file.html (or url savefile. depends on your regex)\n";
 
-	cout << "\t|\t\t\t\t\t\t\t|\n";
-	cout << "\t|\t    -r regex_file.txt\t\t|\n";
+	cout << "\n";
+	cout << "\t\t    -r regex_file.txt\n";
 
-	cout << "\t|\t\t\t\t\t\t\t|\n";
-	cout << "\t|\t    -s url_save_file.txt\t\t|\n";
+	cout << "\n";
+	cout << "\t\t    -s url_save_file.txt\n";
 
-	cout << "\t|\t\t\t\t\t\t\t|\n";
-	cout << "\t|\t    -x (no url save file or output)\t\t|\n";
+	cout << "\n";
+	cout << "\t\t    -x (no url save file or output)\n";
 
-	cout << "\t|\t\t\t\t\t\t\t|\n";
-	cout << "\t|\t    -o /download/path/\t\t|\n";
+	cout << "\n";
+	cout << "\t\t    -o /download/path/\n";
 
-	cout << "\t|\t\t\t\t\t\t\t|\n";
-	cout << "\t+=======================================================+" << endl;
+	cout << "\n";
+	cout << "\t+===================================================================+\n\n";
 
 }
 

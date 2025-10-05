@@ -73,5 +73,7 @@ void multidl(vector<vector<string>> inurl, vector<vector<string>> inname, string
 
 	if(dlpath.back() != '/') dlpath.push_back('/');
 
+	vector<thread> tvec;
+
 }
 
